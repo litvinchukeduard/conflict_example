@@ -1,0 +1,13 @@
+services:
+
+  some-postgres:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: mysecretpassword
+    ports:
+      - "5432:5432"
+    volumes:
+      - my-volume:/home/.postgres-conflict
+
+volumes:
+  my-volume:
